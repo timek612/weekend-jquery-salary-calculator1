@@ -1,0 +1,21 @@
+#head {
+    text-align: center;
+    background-color: grey;
+}
+
+#submit {
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    
+}
+
+#first {
+    background-color: lightgray;
+}
+
+tbody {
+    background-color: antiquewhite;
+}

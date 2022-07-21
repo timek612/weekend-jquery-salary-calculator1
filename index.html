@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Salary Calculator</title>
+</head>
+<body>
+    <header>
+        <h1 id="head">Salary Calculator</h1>
+    </header>
+    <section>
+        <h2>Add Employee</h2>
+        <input id="firstName" placeholder="First Name" type="text">
+        <input id="lastName" placeholder="Last Name" type="text">
+        <input id="ID" placeholder="ID" type="text">
+        <input id="title" placeholder="Title" type="text">
+        <input id="annualSal" placeholder="Annual Salary" type="text">
+        <button id="submit">Submit</button>
+    </section>
+    <main>
+        <h2>Employees</h2>
+    </main>    
+    <table>
+        <thead>
+            <tr id="first">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Annual Salary</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody id="tableBod">
+            <tr id="firstRow">
+                <!-- <td id="fName1">test</td>
+                <td id="lName1">test</td>
+                <td id="ID1">test</td>
+                <td id="title1">test</td>
+                <td id="sal1">test</td>
+                <td><button id="delete1">Delete</button></td> -->
+            </tr>
+        </tbody>    
+    </table>
+    
+</body>
+</html>
