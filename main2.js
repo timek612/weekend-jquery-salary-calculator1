@@ -10,7 +10,7 @@ function readyNow() {
     console.log('JQ');
     $('#submit').on('click', handleClick);
     //$('#submit').on('click', calculateRemainingBudget);
-    $('#tableBod').on('click', '.delete', deleteLine);
+    $('#tableBod').on('click', '.delete', removeSalary);
 
 }
 
@@ -62,10 +62,10 @@ function handleClick() {
 
 }
 
-function deleteLine() {
-    console.log('in delete line');
-    removeSalary();
-    $(this).closest('tr').remove();
+// function deleteLine() {
+//     console.log('in delete line');
+//     removeSalary();
+    //$(this).closest('tr').remove();
     
     // $('#fName1').remove();
     // $('#lName1').remove();
@@ -74,7 +74,7 @@ function deleteLine() {
     // $('#sal1').remove();
     // $('#delete1').remove();
 
-}
+//}
 
 
 function calculateRemainingBudget() {
@@ -88,7 +88,7 @@ function calculateRemainingBudget() {
         variable += salaries[i];
         //console.log(variable);
     }    
-    totalYearly = 0;
+    //totalYearly = 0;
     totalYearly += variable;
     console.log(totalYearly);
     displayBudget();
@@ -106,19 +106,21 @@ function removeSalary() {
 
     let idNumber = $(this).closest('tr').find('.test').text();
     console.log(idNumber);
-    if(idNumber) {
     for (let i = 0; i < employees.length; i++) {
         if (idNumber === employees[i].id) {
-            totalYearly -= employees[i].salary;
-            console.log(totalYearly);
-            displayBudget();
+            console.log(totalYearly); // THIS IS WHERE I LEFT OFF. LOOK INTO .TEST OF SALARY INSTEAD OF ID.
+            // totalYearly -= employees[i].salary; // this is why we're getting negative numbers.
+            // console.log(totalYearly);
+            // displayBudget();
         }
         }
+        $(this).closest('tr').remove();
     }
+
     
 
     
-}
+
 
 function displayBudget() {
     let totalMonthly = totalYearly /= 12;
