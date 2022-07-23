@@ -19,3 +19,7 @@ table {
 tbody {
     background-color: antiquewhite;
 }
+
+body {
+    font-family: monospace;
+}
